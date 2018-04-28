@@ -1,14 +1,13 @@
 # Site settings
-title: Jekyll Doc Theme
-email: your-email@domain.com
+title: My Expression
+email: shangwenluo6 AT gmail DOT com
 description: >
-  Jekyll Template for Project Websites
-  providing documentation and blog post pages.
+  I do science, I code, and I blog.
 
-baseurl: "/jekyll-doc-theme" # the subpath of your site, e.g. /blog/
-url: https://aksakalli.github.io/jekyll-doc-theme # the base hostname & protocol for your site
-git_address: https://github.com/aksakalli/jekyll-doc-theme
-git_edit_address: https://github.com/aksakalli/jekyll-doc-theme/blob/gh-pages
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: https://sluo6.github.io/ # the base hostname & protocol for your site
+git_address: https://github.com/sluo6
+git_edit_address: https://github.com/sluo6/sluo6.github.io
 
 # theme options from https://bootswatch.com/
 # comment out this to use default Bootstrap
@@ -28,7 +27,6 @@ exclude:
   - Gemfile.lock
   - .idea/
   - .gitignore
-  - README.md
 timezone: Europe/Berlin
 defaults:
 - scope:
