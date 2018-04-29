@@ -1,2 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-29T05:20:16+00:00</updated><id>http://localhost:4000/</id><title type="html">My Expression</title><subtitle>I do science, I code, and I blog.
-</subtitle><entry><title type="html">Welcome to my blog</title><link href="http://localhost:4000/blog/2017/04/28/Welcome-to-my-blog/" rel="alternate" type="text/html" title="Welcome to my blog" /><published>2017-04-28T20:51:09+00:00</published><updated>2017-04-28T20:51:09+00:00</updated><id>http://localhost:4000/blog/2017/04/28/Welcome-to-my-blog</id><content type="html" xml:base="http://localhost:4000/blog/2017/04/28/Welcome-to-my-blog/">&lt;p&gt;Welcome to my blog!&lt;/p&gt;</content><author><name>Shangwen</name></author><summary type="html">Welcome to my blog!</summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-29T05:49:12+00:00</updated><id>http://localhost:4000/</id><title type="html">My Expression</title><subtitle>I do science, I code, and I blog.
+</subtitle><entry><title type="html">Python notes(1)</title><link href="http://localhost:4000/blog/2017/04/28/Python-notes1/" rel="alternate" type="text/html" title="Python notes(1)" /><published>2017-04-28T23:32:56+00:00</published><updated>2017-04-28T23:32:56+00:00</updated><id>http://localhost:4000/blog/2017/04/28/Python-notes1</id><content type="html" xml:base="http://localhost:4000/blog/2017/04/28/Python-notes1/">&lt;h2 id=&quot;list-tuple-dictionary-set&quot;&gt;List, tuple, dictionary, set&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;List: [‘apple’, ‘pear’, ‘orange’]; can be multi-dimensional;&lt;/li&gt;
+  &lt;li&gt;tuple: (‘apple’, ‘pear’, ‘orange’); immutable; ordered;&lt;/li&gt;
+  &lt;li&gt;dictionary: {‘apple’:2, ‘pear’:3, ‘orange’:5}; key-value map;&lt;/li&gt;
+  &lt;li&gt;set: {‘a’, ‘b’, ‘c’, ‘d’}; unordered; no duplicates;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hiding-data&quot;&gt;Hiding Data&lt;/h2&gt;
+
+&lt;p&gt;Weakly private attributes and methods are named using &lt;code class=&quot;highlighter-rouge&quot;&gt;_attibute&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;_method&lt;/code&gt; convention.
+Weakly private variables CAN be accessed from outside of class.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;from module import *&lt;/code&gt; won’t import variables named as &lt;code class=&quot;highlighter-rouge&quot;&gt;_variable&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Strongly private attributes are named using &lt;code class=&quot;highlighter-rouge&quot;&gt;__attribute&lt;/code&gt;. They can not be accessed directly from outside class.
+To access variable &lt;code class=&quot;highlighter-rouge&quot;&gt;__a&lt;/code&gt; of class &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; from outside class, syntax &lt;code class=&quot;highlighter-rouge&quot;&gt;_b__a&lt;/code&gt; should be used.&lt;/p&gt;
+
+&lt;h2 id=&quot;lambda&quot;&gt;Lambda&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   #named function
+   def polynomial(x):
+       return x**2 + 7*x + 2
+   print(polynomial(-4))
+   
+   #lambda
+   print((lambda x: x**2 + 5*x + 4) (-4))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;decorators&quot;&gt;Decorators&lt;/h2&gt;
+
+&lt;p&gt;Rudimentary way:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def decor(func):
+  def wrap():
+    print(&quot;============&quot;)
+    func()
+    print(&quot;============&quot;)
+  return wrap
+
+def print_text():
+  print(&quot;Hello world!&quot;)
+
+decorated = decor(print_text)
+decorated()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Elegant way:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def decor(func):
+    def wrap():
+        print(&quot;============&quot;)
+        func()
+        print(&quot;============&quot;)
+    return wrap
+
+@decor
+def print_text():
+    print(&quot;Hello world!&quot;)
+
+print_text();
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Shangwen</name></author><summary type="html">List, tuple, dictionary, set</summary></entry><entry><title type="html">Welcome to my blog</title><link href="http://localhost:4000/blog/2017/04/28/Welcome-to-my-blog/" rel="alternate" type="text/html" title="Welcome to my blog" /><published>2017-04-28T20:51:09+00:00</published><updated>2017-04-28T20:51:09+00:00</updated><id>http://localhost:4000/blog/2017/04/28/Welcome-to-my-blog</id><content type="html" xml:base="http://localhost:4000/blog/2017/04/28/Welcome-to-my-blog/">&lt;p&gt;Welcome to my blog!&lt;/p&gt;</content><author><name>Shangwen</name></author><summary type="html">Welcome to my blog!</summary></entry></feed>
