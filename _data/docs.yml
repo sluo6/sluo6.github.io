@@ -1,11 +1,10 @@
-- title: Getting Started
+- title: Culture Media
   docs:
-  - home
-  - themes
-  - customization
+  - M9
+  - ISP2
 
-- title: Examples
+- title: Protocols
   docs:
-  - cheatsheet
-  - font-awesome
-  - bootstrap
+  - competent-cells
+  - gibson-assembly
+  - sds-recipe
