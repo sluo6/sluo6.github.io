@@ -54,7 +54,7 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li ><a href="/docs/home/">Docs</a></li>
-                <li  class="active" ><a href="/blog/2017/04/28/Python-notes1/">Blog</a></li>
+                <li  class="active" ><a href="/blog/2017/04/29/Python-notes2/">Blog</a></li>
             </ul>
             <div class="navbar-right">
                 <form class="navbar-form navbar-left">
@@ -81,6 +81,8 @@
             <div class="well">
                 <h4>RECENT POSTS</h4>
                 <ul class="list-unstyled post-list-container">
+                    
+                    <li><a href="/blog/2017/04/29/Python-notes2/" >Python notes(2)</a></li>
                     
                     <li><a href="/blog/2017/04/28/Python-notes1/"  class="active" >Python notes(1)</a></li>
                     
@@ -114,45 +116,71 @@ To access variable <code class="highlighter-rouge">__a</code> of class <code cla
 
 <h2 id="lambda">Lambda</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   #named function
-   def polynomial(x):
-       return x**2 + 7*x + 2
-   print(polynomial(-4))
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="c">#named function</span>
+   <span class="k">def</span> <span class="nf">polynomial</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+       <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">7</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
+   <span class="k">print</span><span class="p">(</span><span class="n">polynomial</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">))</span>
    
-   #lambda
-   print((lambda x: x**2 + 5*x + 4) (-4))
+   <span class="c">#lambda</span>
+   <span class="k">print</span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">7</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">))</span>
 </code></pre></div></div>
 
 <h2 id="decorators">Decorators</h2>
 
 <p>Rudimentary way:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def decor(func):
-  def wrap():
-    print("============")
-    func()
-    print("============")
-  return wrap
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">decor</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">wrap</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"============"</span><span class="p">)</span>
+    <span class="n">func</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"============"</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">wrap</span>
 
-def print_text():
-  print("Hello world!")
+<span class="k">def</span> <span class="nf">print_text</span><span class="p">():</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"Hello world!"</span><span class="p">)</span>
 
-decorated = decor(print_text)
-decorated()
+<span class="n">decorated</span> <span class="o">=</span> <span class="n">decor</span><span class="p">(</span><span class="n">print_text</span><span class="p">)</span>
+<span class="n">decorated</span><span class="p">()</span>
 </code></pre></div></div>
+
 <p>Elegant way:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def decor(func):
-    def wrap():
-        print("============")
-        func()
-        print("============")
-    return wrap
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">decor</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrap</span><span class="p">():</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"============"</span><span class="p">)</span>
+        <span class="n">func</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"============"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">wrap</span>
 
-@decor
-def print_text():
-    print("Hello world!")
+<span class="nd">@decor</span>
+<span class="k">def</span> <span class="nf">print_text</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Hello world!"</span><span class="p">)</span>
 
-print_text();
+<span class="n">print_text</span><span class="p">();</span>
 </code></pre></div></div>
+
+<h2 id="class-method">Class method</h2>
+
+<p>Class method is called by a class, instead of an instance of that class, and returns an object,
+in the following example, a “cls” object. Technically, “self” or “cls” can be
+changed to anything else. But everyone follows this convention.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+
+    <span class="k">def</span> <span class="nf">calculate_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">new_square</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">side_length</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">cls</span><span class="p">(</span><span class="n">side_length</span><span class="p">,</span> <span class="n">side_length</span><span class="p">)</span>
+
+<span class="n">square</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="o">.</span><span class="n">new_square</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">square</span><span class="o">.</span><span class="n">calculate_area</span><span class="p">())</span>
+</code></pre></div></div>
+<h2 id="static-method">Static method</h2>
+
+<p>Does not receive any additional arguments. Marked with <code class="highlighter-rouge">@staticmethod</code> decorator.</p>
 </div>
             <hr>
             <ul class="pager">
@@ -163,6 +191,12 @@ print_text();
                     </a>
                 </li>
                  
+                <li class="next">
+                    <a href="/blog/2017/04/29/Python-notes2/">
+                      Newer <span aria-hidden="true">&rarr;</span>
+                    </a>
+                </li>
+                
             </ul>
         </div>
 

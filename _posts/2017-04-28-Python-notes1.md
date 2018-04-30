@@ -23,20 +23,20 @@ To access variable `__a` of class `b` from outside class, syntax `_b__a` should 
 
 ## Lambda
 
-```
+```python
    #named function
    def polynomial(x):
        return x**2 + 7*x + 2
    print(polynomial(-4))
    
    #lambda
-   print((lambda x: x**2 + 5*x + 4) (-4))
+   print((lambda x: x**2 + 7*x + 2) (-4))
    ```
    
 ## Decorators
 
 Rudimentary way:
-```
+```python
 def decor(func):
   def wrap():
     print("============")
@@ -50,8 +50,9 @@ def print_text():
 decorated = decor(print_text)
 decorated()
 ```
+
 Elegant way:
-```
+```python
 def decor(func):
     def wrap():
         print("============")
@@ -65,3 +66,29 @@ def print_text():
 
 print_text();
 ```
+
+## Class method
+
+Class method is called by a class, instead of an instance of that class, and returns an object,
+in the following example, a "cls" object. Technically, "self" or "cls" can be
+changed to anything else. But everyone follows this convention.
+
+```python
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def calculate_area(self):
+        return self.width * self.height
+
+    @classmethod
+    def new_square(cls, side_length):
+        return cls(side_length, side_length)
+
+square = Rectangle.new_square(5)
+print(square.calculate_area())
+```
+## Static method
+
+Does not receive any additional arguments. Marked with `@staticmethod` decorator.
