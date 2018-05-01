@@ -21,7 +21,8 @@ Copied from [here](http://www.worldtimzone.com/res/vi.html).
 + 0 - (zero) start of line
 + ^ - first non-blank character of line
 + $ - end of line
-+ G - Go To command (prefix with number - 5G goes to line 5)  
++ G - Go To command (prefix with number - 5G goes to line 5)    
+
 **Note**: Prefix a cursor movement command with a number to repeat it. For example, 4j moves down 4 lines.
 
 ### Insert Mode - Inserting/Appending text
