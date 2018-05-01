@@ -1,5 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-30T04:46:21+00:00</updated><id>http://localhost:4000/</id><title type="html">My Expression</title><subtitle>I do science, I code, and I blog.
-</subtitle><entry><title type="html">Python notes(2)</title><link href="http://localhost:4000/blog/2017/04/29/Python-notes2/" rel="alternate" type="text/html" title="Python notes(2)" /><published>2017-04-29T22:50:15+00:00</published><updated>2017-04-29T22:50:15+00:00</updated><id>http://localhost:4000/blog/2017/04/29/Python-notes2</id><content type="html" xml:base="http://localhost:4000/blog/2017/04/29/Python-notes2/">&lt;h2 id=&quot;regular-expression&quot;&gt;Regular expression&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-05-01T00:43:51+00:00</updated><id>http://localhost:4000/</id><title type="html">My Expression</title><subtitle>I do science, I code, and I blog.
+</subtitle><entry><title type="html">Java notes(1)</title><link href="http://localhost:4000/blog/2017/04/30/Java-notes1/" rel="alternate" type="text/html" title="Java notes(1)" /><published>2017-04-30T19:36:14+00:00</published><updated>2017-04-30T19:36:14+00:00</updated><id>http://localhost:4000/blog/2017/04/30/Java-notes1</id><content type="html" xml:base="http://localhost:4000/blog/2017/04/30/Java-notes1/">&lt;h1 id=&quot;whats-the-meaning-of-final-in-java&quot;&gt;What’s the meaning of “final” in java?&lt;/h1&gt;
+
+&lt;p&gt;The following is adapted from &lt;a href=&quot;https://stackoverflow.com/questions/15655012/how-does-the-final-keyword-in-java-work-i-can-still-modify-an-object&quot;&gt;this link&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Test&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// private static final List foo = new ArrayList();&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Results in compile time error.&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Modification-1&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setFoo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+       &lt;span class=&quot;c1&quot;&gt;//this.foo = foo; Results in compile time error.&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
+      &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;n&quot;&gt;Test&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+          &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bar&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Modification-2&lt;/span&gt;
+          &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;print - &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In the above example, a ‘Test’ constructor is defined, and given a ‘setFoo’ method.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;foo&lt;/code&gt; is an &lt;strong&gt;instance variable&lt;/strong&gt;. When we create &lt;code class=&quot;highlighter-rouge&quot;&gt;Test&lt;/code&gt; class object, then the instance variable &lt;code class=&quot;highlighter-rouge&quot;&gt;foo&lt;/code&gt; will be copied
+inside the object of &lt;code class=&quot;highlighter-rouge&quot;&gt;Test&lt;/code&gt; class, and instantiated to an ArrayList with “foo” content. &lt;strong&gt;The value of a final variable
+can only be assigned one time&lt;/strong&gt;. So &lt;code class=&quot;highlighter-rouge&quot;&gt;this.foo = foo'&lt;/code&gt; in the ‘setFoo’ method will cause a compile time error.&lt;/p&gt;
+
+&lt;p&gt;If &lt;code class=&quot;highlighter-rouge&quot;&gt;private final List foo;&lt;/code&gt; is changed to &lt;code class=&quot;highlighter-rouge&quot;&gt;private static final List foo = new ArrayList();&lt;/code&gt;  The compiler will yell at
+you. That is because, in this case, &lt;code class=&quot;highlighter-rouge&quot;&gt;foo&lt;/code&gt; is a &lt;strong&gt;static&lt;/strong&gt; variable. A static variable is shared by all instances of that
+class. If every new instance of that class can see the &lt;code class=&quot;highlighter-rouge&quot;&gt;foo&lt;/code&gt; variable, and try to re-assign it to a new ArrayList when
+ constructor is called, the compiler will start to yell.&lt;/p&gt;
+
+&lt;p&gt;Modification-1 and Modification-2 are both allowed. Because those code were only adding contents to &lt;code class=&quot;highlighter-rouge&quot;&gt;foo&lt;/code&gt;. They are not
+re-assigning &lt;code class=&quot;highlighter-rouge&quot;&gt;foo&lt;/code&gt; to something else. In other words, &lt;code class=&quot;highlighter-rouge&quot;&gt;final&lt;/code&gt; is only about the &lt;strong&gt;reference&lt;/strong&gt; itself, and not about the
+contents of the referenced object.&lt;/p&gt;
+
+&lt;p&gt;The above examples gives a clear explanation of &lt;code class=&quot;highlighter-rouge&quot;&gt;final&lt;/code&gt; variable.&lt;/p&gt;
+
+&lt;p&gt;Other rules for &lt;code class=&quot;highlighter-rouge&quot;&gt;final&lt;/code&gt; key word:&lt;br /&gt;
+&lt;strong&gt;final&lt;/strong&gt; classes cannot be subclassed.&lt;br /&gt;
+&lt;strong&gt;final&lt;/strong&gt; method cannot be overridden by subclasses, but can override.&lt;/p&gt;</content><author><name>Shangwen</name></author><summary type="html">What’s the meaning of “final” in java?</summary></entry><entry><title type="html">Python notes(2)</title><link href="http://localhost:4000/blog/2017/04/29/Python-notes2/" rel="alternate" type="text/html" title="Python notes(2)" /><published>2017-04-29T22:50:15+00:00</published><updated>2017-04-29T22:50:15+00:00</updated><id>http://localhost:4000/blog/2017/04/29/Python-notes2</id><content type="html" xml:base="http://localhost:4000/blog/2017/04/29/Python-notes2/">&lt;h2 id=&quot;regular-expression&quot;&gt;Regular expression&lt;/h2&gt;
 
 &lt;p&gt;Can be accessed by &lt;code class=&quot;highlighter-rouge&quot;&gt;re&lt;/code&gt; module.
 Basic syntax example:&lt;/p&gt;
