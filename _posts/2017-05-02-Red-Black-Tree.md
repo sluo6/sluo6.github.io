@@ -8,4 +8,10 @@ author: Shangwen
 Can be found from [here](https://github.com/sluo6/data-structure-algorithm/blob/master/src/RedBlackBST.java).
 
 ## Quick Reference of Core Operations
-![alt text](https://github.com/sluo6/sluo6.github.io/blob/master/img/redblack-left-rotate.png?raw=true "Left Rotate")![alt text](https://github.com/sluo6/sluo6.github.io/blob/master/img/redblack-right-rotate.png?raw=true "Right Rotate")![alt text](https://github.com/sluo6/sluo6.github.io/blob/master/img/color-flip.png?raw=true "Flip Node Color")
+
+
+<img style="display: inline-block;" src = "https://github.com/sluo6/sluo6.github.io/blob/master/img/redblack-left-rotate.png?raw=true">
+<img style="display: inline-block;" src = "https://github.com/sluo6/sluo6.github.io/blob/master/img/redblack-right-rotate.png?raw=true">
+<img style="display: inline-block;" src = "https://github.com/sluo6/sluo6.github.io/blob/master/img/color-flip.png?raw=true">
+
+Above pictures are taken from [this link](https://algs4.cs.princeton.edu/33balanced/).

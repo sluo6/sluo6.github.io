@@ -1,5 +1,114 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-05-01T00:43:51+00:00</updated><id>http://localhost:4000/</id><title type="html">My Expression</title><subtitle>I do science, I code, and I blog.
-</subtitle><entry><title type="html">Java notes(1)</title><link href="http://localhost:4000/blog/2017/04/30/Java-notes1/" rel="alternate" type="text/html" title="Java notes(1)" /><published>2017-04-30T19:36:14+00:00</published><updated>2017-04-30T19:36:14+00:00</updated><id>http://localhost:4000/blog/2017/04/30/Java-notes1</id><content type="html" xml:base="http://localhost:4000/blog/2017/04/30/Java-notes1/">&lt;h1 id=&quot;whats-the-meaning-of-final-in-java&quot;&gt;What’s the meaning of “final” in java?&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-05-03T03:23:59+00:00</updated><id>http://localhost:4000/</id><title type="html">My Expression</title><subtitle>I do science, I code, and I blog.
+</subtitle><entry><title type="html">Red Black Tree Java Implementation</title><link href="http://localhost:4000/blog/2017/05/02/Red-Black-Tree/" rel="alternate" type="text/html" title="Red Black Tree Java Implementation" /><published>2017-05-02T21:55:26+00:00</published><updated>2017-05-02T21:55:26+00:00</updated><id>http://localhost:4000/blog/2017/05/02/Red-Black-Tree</id><content type="html" xml:base="http://localhost:4000/blog/2017/05/02/Red-Black-Tree/">&lt;h2 id=&quot;java-code&quot;&gt;Java Code&lt;/h2&gt;
+&lt;p&gt;Can be found from &lt;a href=&quot;https://github.com/sluo6/data-structure-algorithm/blob/master/src/RedBlackBST.java&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;quick-reference-of-core-operations&quot;&gt;Quick Reference of Core Operations&lt;/h2&gt;
+
+&lt;p&gt;&lt;img style=&quot;display: inline-block;&quot; src=&quot;https://github.com/sluo6/sluo6.github.io/blob/master/img/redblack-left-rotate.png?raw=true&quot; /&gt;
+&lt;img style=&quot;display: inline-block;&quot; src=&quot;https://github.com/sluo6/sluo6.github.io/blob/master/img/redblack-right-rotate.png?raw=true&quot; /&gt;
+&lt;img style=&quot;display: inline-block;&quot; src=&quot;https://github.com/sluo6/sluo6.github.io/blob/master/img/color-flip.png?raw=true&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Above pictures are taken from &lt;a href=&quot;https://algs4.cs.princeton.edu/33balanced/&quot;&gt;this link&lt;/a&gt;.&lt;/p&gt;</content><author><name>Shangwen</name></author><summary type="html">Java Code Can be found from here.</summary></entry><entry><title type="html">Vim Cheatsheet</title><link href="http://localhost:4000/blog/2017/04/30/Vim-Cheatsheet/" rel="alternate" type="text/html" title="Vim Cheatsheet" /><published>2017-04-30T22:27:21+00:00</published><updated>2017-04-30T22:27:21+00:00</updated><id>http://localhost:4000/blog/2017/04/30/Vim-Cheatsheet</id><content type="html" xml:base="http://localhost:4000/blog/2017/04/30/Vim-Cheatsheet/">&lt;p&gt;Copied from &lt;a href=&quot;http://www.worldtimzone.com/res/vi.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;cursor-movement&quot;&gt;Cursor movement&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;h - move left&lt;/li&gt;
+  &lt;li&gt;j - move down&lt;/li&gt;
+  &lt;li&gt;k - move up&lt;/li&gt;
+  &lt;li&gt;l - move right&lt;/li&gt;
+  &lt;li&gt;w - jump by start of words (punctuation considered words)&lt;/li&gt;
+  &lt;li&gt;W - jump by words (spaces separate words)&lt;/li&gt;
+  &lt;li&gt;e - jump to end of words (punctuation considered words)&lt;/li&gt;
+  &lt;li&gt;E - jump to end of words (no punctuation)&lt;/li&gt;
+  &lt;li&gt;b - jump backward by words (punctuation considered words)&lt;/li&gt;
+  &lt;li&gt;B - jump backward by words (no punctuation)&lt;/li&gt;
+  &lt;li&gt;0 - (zero) start of line&lt;/li&gt;
+  &lt;li&gt;^ - first non-blank character of line&lt;/li&gt;
+  &lt;li&gt;$ - end of line&lt;/li&gt;
+  &lt;li&gt;G - Go To command (prefix with number - 5G goes to line 5)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Prefix a cursor movement command with a number to repeat it. For example, 4j moves down 4 lines.&lt;/p&gt;
+
+&lt;h3 id=&quot;insert-mode---insertingappending-text&quot;&gt;Insert Mode - Inserting/Appending text&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;i - start insert mode at cursor&lt;/li&gt;
+  &lt;li&gt;I - insert at the beginning of the line&lt;/li&gt;
+  &lt;li&gt;a - append after the cursor&lt;/li&gt;
+  &lt;li&gt;A - append at the end of the line&lt;/li&gt;
+  &lt;li&gt;o - open (append) blank line below current line (no need to press return)&lt;/li&gt;
+  &lt;li&gt;O - open blank line above current line&lt;/li&gt;
+  &lt;li&gt;ea - append at end of word&lt;/li&gt;
+  &lt;li&gt;Esc - exit insert mode
+    &lt;h3 id=&quot;editing&quot;&gt;Editing&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;r - replace a single character (does not use insert mode)&lt;/li&gt;
+  &lt;li&gt;J - join line below to the current one&lt;/li&gt;
+  &lt;li&gt;cc - change (replace) an entire line&lt;/li&gt;
+  &lt;li&gt;cw - change (replace) to the end of word&lt;/li&gt;
+  &lt;li&gt;c$ - change (replace) to the end of line&lt;/li&gt;
+  &lt;li&gt;s - delete character at cursor and subsitute text&lt;/li&gt;
+  &lt;li&gt;S - delete line at cursor and substitute text (same as cc)&lt;/li&gt;
+  &lt;li&gt;xp - transpose two letters (delete and paste, technically)&lt;/li&gt;
+  &lt;li&gt;u - undo&lt;/li&gt;
+  &lt;li&gt;. - repeat last command
+    &lt;h3 id=&quot;marking-text-visual-mode&quot;&gt;Marking text (visual mode)&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;v - start visual mode, mark lines, then do command (such as y-yank)&lt;/li&gt;
+  &lt;li&gt;V - start Linewise visual mode&lt;/li&gt;
+  &lt;li&gt;o - move to other end of marked area&lt;/li&gt;
+  &lt;li&gt;Ctrl+v - start visual block mode&lt;/li&gt;
+  &lt;li&gt;O - move to Other corner of block&lt;/li&gt;
+  &lt;li&gt;aw - mark a word&lt;/li&gt;
+  &lt;li&gt;ab - a () block (with braces)&lt;/li&gt;
+  &lt;li&gt;aB - a {} block (with brackets)&lt;/li&gt;
+  &lt;li&gt;ib - inner () block&lt;/li&gt;
+  &lt;li&gt;iB - inner {} block&lt;/li&gt;
+  &lt;li&gt;Esc - exit visual mode
+    &lt;h3 id=&quot;visual-commands&quot;&gt;Visual commands&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&amp;gt; - shift right&lt;/li&gt;
+  &lt;li&gt;&amp;lt; - shift left&lt;/li&gt;
+  &lt;li&gt;y - yank (copy) marked text&lt;/li&gt;
+  &lt;li&gt;d - delete marked text&lt;/li&gt;
+  &lt;li&gt;~ - switch case
+    &lt;h3 id=&quot;cut-and-paste&quot;&gt;Cut and Paste&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;yy - yank (copy) a line&lt;/li&gt;
+  &lt;li&gt;2yy - yank 2 lines&lt;/li&gt;
+  &lt;li&gt;yw - yank word&lt;/li&gt;
+  &lt;li&gt;y$ - yank to end of line&lt;/li&gt;
+  &lt;li&gt;p - put (paste) the clipboard after cursor&lt;/li&gt;
+  &lt;li&gt;P - put (paste) before cursor&lt;/li&gt;
+  &lt;li&gt;dd - delete (cut) a line&lt;/li&gt;
+  &lt;li&gt;dw - delete (cut) the current word&lt;/li&gt;
+  &lt;li&gt;x - delete (cut) current character
+    &lt;h3 id=&quot;exiting&quot;&gt;Exiting&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;:w - write (save) the file, but don’t exit&lt;/li&gt;
+  &lt;li&gt;:wq - write (save) and quit&lt;/li&gt;
+  &lt;li&gt;:q - quit (fails if anything has changed)&lt;/li&gt;
+  &lt;li&gt;:q! - quit and throw away changes
+    &lt;h3 id=&quot;searchreplace&quot;&gt;Search/Replace&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;/pattern - search for pattern&lt;/li&gt;
+  &lt;li&gt;?pattern - search backward for pattern&lt;/li&gt;
+  &lt;li&gt;n - repeat search in same direction&lt;/li&gt;
+  &lt;li&gt;N - repeat search in opposite direction&lt;/li&gt;
+  &lt;li&gt;:%s/old/new/g - replace all old with new throughout file&lt;/li&gt;
+  &lt;li&gt;:%s/old/new/gc - replace all old with new throughout file with confirmations
+    &lt;h3 id=&quot;working-with-multiple-files&quot;&gt;Working with multiple files&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;:e filename - Edit a file in a new buffer&lt;/li&gt;
+  &lt;li&gt;:bnext (or :bn) - go to next buffer&lt;/li&gt;
+  &lt;li&gt;:bprev (of :bp) - go to previous buffer&lt;/li&gt;
+  &lt;li&gt;:bd - delete a buffer (close a file)&lt;/li&gt;
+  &lt;li&gt;:sp filename - Open a file in a new buffer and split window&lt;/li&gt;
+  &lt;li&gt;ctrl+ws - Split windows&lt;/li&gt;
+  &lt;li&gt;ctrl+ww - switch between windows&lt;/li&gt;
+  &lt;li&gt;ctrl+wq - Quit a window&lt;/li&gt;
+  &lt;li&gt;ctrl+wv - Split windows vertically&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Shangwen</name></author><summary type="html">Copied from here.</summary></entry><entry><title type="html">Java notes(1)</title><link href="http://localhost:4000/blog/2017/04/30/Java-notes1/" rel="alternate" type="text/html" title="Java notes(1)" /><published>2017-04-30T19:36:14+00:00</published><updated>2017-04-30T19:36:14+00:00</updated><id>http://localhost:4000/blog/2017/04/30/Java-notes1</id><content type="html" xml:base="http://localhost:4000/blog/2017/04/30/Java-notes1/">&lt;h1 id=&quot;whats-the-meaning-of-final-in-java&quot;&gt;What’s the meaning of “final” in java?&lt;/h1&gt;
 
 &lt;p&gt;The following is adapted from &lt;a href=&quot;https://stackoverflow.com/questions/15655012/how-does-the-final-keyword-in-java-work-i-can-still-modify-an-object&quot;&gt;this link&lt;/a&gt;.&lt;/p&gt;
 
