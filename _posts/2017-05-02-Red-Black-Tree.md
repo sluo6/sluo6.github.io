@@ -5,7 +5,7 @@ date:   2017-05-02 21:55:26
 author: Shangwen
 ---
 ## Java Code
-Can be found from [here](https://github.com/sluo6/data-structure-algorithm/blob/master/src/RedBlackBST.java).
+Can be found from [here](https://github.com/sluo6/data-structure-algorithm/blob/master/src/sluo/learn/algorithm/RedBlackBST.java).
 
 ## Quick Reference of Core Operations
 
